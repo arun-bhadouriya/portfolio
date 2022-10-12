@@ -104,12 +104,17 @@ body{
     font-size: 1rem;
     color:inherit;
     border: #17141d;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     /* font-weight: bold; */
 }
-.container button:hover{
+.container a:hover{
     background: inherit;
     background-color: inherit;
-    border: 2px solid var(--orange);
+    border: 1px solid var(--orange);
 }
 .image-chooder{
     display: flex;
