@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap');
+:root{
+    --orange: #ff8a00;
+    --gradient: linear-gradient(90deg, var(--orange), #e52e71);
+    --black: #17141d;
+    --white: rgb(221, 218, 218);
+    --gradient1:linear-gradient(to left, #833ab4, #fd1d1d, #fcb045);
+    --gutter-normal:3rem;
+    --gutter-medium: 6rem;
+}
+
+
+body{
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Raleway', sans-serif;
+}
+
+/* header */
+header{
+    display: flex;
+    justify-content: end;
+}
+.navigation ul{
+    display: inline;
+    width: 50%;
+}
+.navigation ul li {
+    display: inline-block;
+    font-size: 1.5rem;
+     margin: 1rem;
+}
+.navigation ul li:hover{
+    background: var(--gradient);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.navigation a{
+    color:inherit;
+    text-decoration: none;
+}
+
+
+
+/* main */
+
+.dev{
+    font-size: 1.5rem;
+    /* margin-left: 2rem; */
+    margin-top: -30px;
+}
+
+.social-links{
+    display: flex;
+    position: absolute;
+    left: 50px;
+    top:20px;
+}
+
+.social-links a img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.social-links a img:hover{
+}
+
+.social-links a{
+    width: 50px;
+}
+
+.container{
+    width: 80%;
+    padding: 10%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.container img{
+    height: 16rem;
+    width: 16rem;
+    border-radius: 100%;
+}
+.container .text{
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    font-size: 3rem;
+}
+.container .text .name{
+    font-size: 4rem;
+}
+.container .btn{
+    width: 10rem;
+    min-height: 3rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    padding: .1rem;
+    background: var(--gradient);
+    font-family: inherit;
+    font-size: 1rem;
+    color:inherit;
+    border: #17141d;
+    /* font-weight: bold; */
+}
+.container button:hover{
+    background: inherit;
+    background-color: inherit;
+    border: 2px solid var(--orange);
+}
+.image-chooder{
+    display: flex;
+}
+.file-chooser{
+    background: var(--gradient);
+    border: none;
+    border-radius: 10px;
+}
+.file-chooser:hover{
+    cursor: pointer;
+    background: var(--gradient) !important;
+    border: none !important;
+}
+.file-chooser img{
+    width: 20px;
+    height: 20px;
+}
+
+/* education section  styles*/
+.education{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.skills h1{
+    font-size: 3.5rem;
+    font-family: inherit;
+}
+
+.skills img{
+    width: 10%;
+}
+
+/* education details */
+.educationDetails{
+    display: flex;
+    justify-content: space-around;
+}
+
+.educationDetails img{
+    height: 450px;
+}
+
+
+#e1{
+    margin: 50px;
+}
+
+#title{
+    font-family: inherit;
+    font-size: 2rem;
+}
+
+.projects h1{
+    margin-bottom: 50px;
+}
+.project-container{
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+.projects{
+    margin-top: 200px;
+}
+
+.project-title{
+    font-size: 2rem;
+}
+.project-description{
+    font-size: 1rem;
+    margin: 20px 0; 
+}
+.img-edu{
+    height: fit-content !important;
+}
+
+/* footer */
+.contact-me{
+    margin: 2rem;
+}
+.contact-info{
+}
+.contact-number{
+    font-size: large;
+}
+footer{
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.contact-mail a{
+    color: inherit;
+    text-decoration: none;
+    font-size: large;
+}
+
+.footer-links{
+    text-align: center;
+    margin: 5rem;
+}
+.footer-links a{
+    margin: 0 1rem;
+}
+
+.connect{
+    background: var(--white);
+    -webkit-text-fill-color: transparent;  
+    -webkit-background-clip: text;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 7rem;
+    background: var(--gradient);
+    margin: 2.5rem 0;
+}
+
+
+
+.project-card {
+    padding: var(--gutter-normal);
+    border-radius: 16px;
+    background: var(--black);
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-1rem);
+  }
+  
+  .project-card:not(:last-child) {
+    margin-bottom: var(--gutter-normal);
+  }
+  
+  @media (max-width: 900px) {
+    .project-card {
+      align-items: initial;
+      flex-direction: column;
+    }
+  }
+  
+  .project-image {
+    margin-bottom: var(--gutter-normal);
+    /* width: 50%; */
+  }
+  
+  /* .project-image img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  } */
+  
+  .project-text {
+    flex: 0 0 30%;
+    /* padding: 0 var(--gutter-normal); */
+  }
+  
+  .project-text h3:hover {
+    background: var(--gradient);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .project-text ul {
+    list-style-position: inside;
+    margin-bottom: var(--gutter-normal);
+  }
+  
+  .project-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .project-source {
+    display: block;
+    height: 3rem;
+    margin-left: var(--gutter-normal);
+    transition: all 0.3s;
+  }
+  
+  .project-source:hover {
+    transform: scale(1.2);
+  }
+  
+  @media (min-width: 901px) {
+    .project-image {
+      flex: 1;
+      margin-right: var(--gutter-medium);
+      margin-bottom: 0;
+    }
+    /* .project-image img {
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+    } */
+  
+    .project-text {
+      flex: 0 0 30%;
+      /* padding: var(--gutter-normal) 0; */
+    }
+  }
+  
+  .show-more-button {
+    text-align: center;
+    margin-top: var(--gutter-medium);
+  }
+
+  main{
+    margin-top: var(--gutter-normal);
+  }
+  .tag{
+    background-color: gray;
+    display: inline-block;
+    width: 3.5rem auto;
+    margin: .1rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: medium;
+    font-weight: bolder;
+    border-radius: 2.5px;
+  }
+
+  .skills{
+    margin-bottom: 9rem;
+  }
+  .edu-connect{
+    margin: var(--gutter-medium) 0;
+    /* padding: 1rem 0 */
+  }
+
+
+  /* responsive design */
+
+  @media (max-width:900px) {
+    .social-links{
+        display: none;
+    }
+  }
